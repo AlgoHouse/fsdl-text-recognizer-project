@@ -14,8 +14,8 @@ from training.util import train_model
 
 
 DEFAULT_TRAIN_ARGS = {
-    'batch_size': 64,
-    'epochs': 8
+    'batch_size': 32,
+    'epochs': 100
 }
 
 
@@ -120,4 +120,3 @@ if __name__ == '__main__':
     experiment_config = json.loads(args.experiment_config)
     os.environ["CUDA_VISIBLE_DEVICES"] = f'{args.gpu}'
     run_experiment(experiment_config, args.save, args.gpu)
-
